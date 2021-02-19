@@ -2,14 +2,20 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import ProfilePicture from '../../../ProfilePicture';
 import styles from './style';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/Entypo';
 
 const Header = ({imageUri, name}) => {
     return ( 
         <View style={styles.container}>
-            <ProfilePicture uri={imageUri} size={40} />
-            <Text style={styles.name}>{name}</Text>
-            <Icon name="rocket" size={30} color="#900" />
+            <View style={styles.left}>
+                <ProfilePicture uri={imageUri} size={40} />
+                <Text style={styles.name}>{name}</Text>
+            </View>
+            <View style={styles.right}>
+                <Icon name="dots-three-vertical" size={20} color="#900" />
+            </View>
+            
+            
         </View>
      );
 }
