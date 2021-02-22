@@ -8,23 +8,23 @@
 
 import React from 'react';
 import {
-  View,
-  Text,
   StatusBar,
-  SafeAreaView,
 } from 'react-native';
-import HomeScreen from './src/screens/HomeScreen';
+
+import 'react-native-gesture-handler';
+import {NavigationContainer} from '@react-navigation/native';
+
+import Router from './src/router';
+
 
 const App: () => React$Node = () => {
   return (
-    <>
+    <NavigationContainer>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <HomeScreen />
-      </SafeAreaView>
       
+      <Router />
     
-    </>
+    </NavigationContainer>
   );
 };
 
